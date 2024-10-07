@@ -1,0 +1,132 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Hero/Header Section */
+.hero {
+  background: url("hero-background.jpg") no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero .logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+.hero h1 span {
+  color: #4caf50;
+}
+.hero .cta-button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.hero .cta-button:hover {
+  background-color: #45a049;
+}
+
+/* About Company Section */
+.about-company {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+.about-company h2 {
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+.about-company p {
+  color: #666;
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Testimonials Section */
+.testimonial {
+  background-color:#45a049
+  padding: 60px 20px;
+  text-align: center;
+}
+.testimonial h2 {
+  color: #333;
+  margin-bottom: 30px;
+}
+.testimonials {
+  background-color: #45a049;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid white; /* Add white border to testimonials */
+}
+
+
+.testimonial p {
+  color: #666;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+.testimonial h3 {
+  margin-top: 15px;
+  color: #4caf50;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+.contact p {
+  font-size: 1.2em;
+  color: #666;
+}
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+.contact-info li {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+.contact-info li strong {
+  color: #4caf50;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer p {
+  margin: 0;
+}

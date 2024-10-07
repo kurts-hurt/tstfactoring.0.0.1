@@ -1,0 +1,233 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://scontent-iad3-2.xx.fbcdn.net/v/t39.30808-6/326928276_688238619450406_7425451356235250566_n.jpg?stp=dst-jpg_p180x540&_nc_cat=103&ccb=1-7&_nc_sid=86c6b0&_nc_ohc=uT7u8x7fQc8Q7kNvgE1BQkU&_nc_ht=scontent-iad3-2.xx&_nc_gid=AWOlFhqZxyKiI_XIPrA3c4U&oh=00_AYCTEC85P6X0jiDT6Ya81vhQ1cr38I_o4kFSYfRZL0ImXw&oe=6708A495")
+    no-repeat left center/cover;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+.hero .logo {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  color: whitesmoke;
+}
+.hero h1 span {
+  color: #4caf50;
+}
+.hero .cta-button {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.hero .cta-button:hover {
+  background-color: #45a049;
+}
+
+/* Services Section */
+.services {
+  background-color: rgb(229, 255, 229);
+  padding: 60px 20px;
+}
+.services h2 {
+  color: #4caf50;
+}
+.services p {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+.services .services-list {
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
+}
+.services .services-list li {
+  margin: 10px 0;
+}
+.services .cta-button {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.services .cta-button:hover {
+  background-color: #555;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #4caf50;
+  padding: 60px 20px;
+  text-align: center;
+  overflow: hidden; /* Hide overflow content */
+  position: relative;
+}
+
+.testimonials h2 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  animation: scroll 40s linear infinite; /* Infinite scrolling animation */
+  width: max-content; /* Allow flexbox to fit content properly */
+}
+
+/* Duplicate the testimonials for the illusion of infinite scrolling */
+.testimonials-wrapper::after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.testimonial {
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  flex-shrink: 1; /* Prevent items from shrinking */
+}
+
+/* Scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(50); /* Start position */
+  }
+  100% {
+    transform: translateX(
+      -20%
+    ); /* Move the entire width of the testimonials set */
+  }
+}
+
+/* Adjust testimonial text */
+.testimonials p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.testimonials h3 {
+  margin-top: 15px;
+  color: #4caf50;
+}
+/* Dashboard Menu Styles */
+.dashboard-menu {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.dashboard-menu .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dashboard-menu .logo img {
+  max-width: 120px;
+}
+
+.dashboard-menu nav {
+  display: flex;
+}
+
+.dashboard-menu .nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.dashboard-menu .nav-links li {
+  margin: 0 20px;
+}
+
+.dashboard-menu .nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.dashboard-menu .nav-links a:hover {
+  color: #4caf50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-menu .nav-links {
+    flex-direction: column;
+    display: none;
+  }
+
+  .dashboard-menu nav.active .nav-links {
+    display: flex;
+  }
+
+  .dashboard-menu nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+/* Hamburger Icon */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Show hamburger menu on small screens */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
